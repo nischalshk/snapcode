@@ -1,4 +1,6 @@
 {
     "mongoURI":"mongodb+srv://nischal123:nischal123@bt-sn.wtfy3.mongodb.net/snapcode?retryWrites=true&w=majority"
-    ,"jwtSecret":"mysecrettoken"
+    ,"jwtSecret":"mysecrettoken",
+    "githubClientId":"79e71a11c8952a279305",
+    "githubSecret":"8316053039f18648daf016183bd7a4dcc2c6a802"
 }
