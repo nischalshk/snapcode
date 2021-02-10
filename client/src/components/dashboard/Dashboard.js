@@ -21,10 +21,12 @@ const Dashboard=({getCurrentProfile,auth:{user},profile:{profile,loading}})=>{
       <i className='fas fa-user'></i>
       Welcome {user && user.name }
 </p>
-{profile !==null? <Fragment><DashboardActions/></Fragment>:<Fragment>
+{profile !==null? (<Fragment>
+  
+  <DashboardActions/></Fragment>):(<Fragment>
   <p>you have not setup a profile</p>
 <Link to='/create-profile' className="btn btn-primary my-1">Setup your Profile</Link>  
-  </Fragment>}
+  </Fragment>)}
 
 
     </Fragment>
