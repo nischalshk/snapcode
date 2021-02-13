@@ -1,14 +1,14 @@
-import React, { Fragment, useEffect } from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import Spinner from "../common/Spinner";
-import { getProfiles, profiles, loading } from "../../actions/profile";
-import ProfileItem from "./ProfileItem";
+import React, { Fragment, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import Spinner from '../common/Spinner';
+import { getProfiles, profiles, loading } from '../../actions/profile';
+import ProfileItem from './ProfileItem';
 
 const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
     getProfiles();
-  }, []);
+  }, [getProfiles]);
 
   return (
     <Fragment>
@@ -16,11 +16,11 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
         <Spinner />
       ) : (
         <Fragment>
-          <h1 className="large text-primary "> Developers</h1>
-          <p className="lead">
-            <i className="fab fa-connectdevelop"></i>Browse with developers
+          <h1 className='large text-primary '> Developers</h1>
+          <p className='lead'>
+            <i className='fab fa-connectdevelop'></i>Browse with developers
           </p>
-          <div className="profiles">
+          <div className='profiles'>
             {profiles.length > 0 ? (
               profiles.map((profile) => (
                 <ProfileItem key={profile._id} profile={profile} />

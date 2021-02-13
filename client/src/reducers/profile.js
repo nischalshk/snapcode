@@ -1,13 +1,13 @@
 import {
   GET_PROFILE,
-  PROFILE_LOADING,
-  CLEAR_CURRENT_PROFILE,
+  //PROFILE_LOADING,
+  //CLEAR_CURRENT_PROFILE,
   CLEAR_PROFILE,
   PROFILE_ERROR,
   UPDATE_PROFILE,
   GET_PROFILES,
   GET_REPOS,
-} from "../actions/types";
+} from '../actions/types';
 
 const initialState = {
   profile: null,
